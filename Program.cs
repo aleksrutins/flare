@@ -18,7 +18,7 @@ var app = builder.Build();
 
 app.UseWebSockets();
 app.UseGraphQL();
-app.UseGraphQLGraphiQL();
+app.UseGraphQLAltair();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
