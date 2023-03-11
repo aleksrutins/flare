@@ -13,8 +13,6 @@ ADD . /app
 
 WORKDIR /app
 
-RUN stack setup
-
-RUN stack build
+RUN stack build --install-ghc
 
 CMD ["stack", "exec", "flare"]
