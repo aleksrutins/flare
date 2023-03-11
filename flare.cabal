@@ -4,11 +4,11 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 
-name:           elm-haskell-fullstack
+name:           flare
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/aleksrutins/elm-haskell-fullstack#readme>
-homepage:       https://github.com/aleksrutins/elm-haskell-fullstack#readme
-bug-reports:    https://github.com/aleksrutins/elm-haskell-fullstack/issues
+description:    Please see the README on GitHub at <https://github.com/aleksrutins/flare#readme>
+homepage:       https://github.com/aleksrutins/flare#readme
+bug-reports:    https://github.com/aleksrutins/flare/issues
 author:         Aleks Rutins
 maintainer:     aleks@rutins.com
 copyright:      2023 Aleks Rutins
@@ -21,13 +21,13 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/aleksrutins/elm-haskell-fullstack
+  location: https://github.com/aleksrutins/flare
 
 library
   exposed-modules:
       Lib
   other-modules:
-      Paths_elm_haskell_fullstack
+      Paths_flare
   hs-source-dirs:
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
@@ -45,10 +45,10 @@ library
     , warp >=3
   default-language: Haskell2010
 
-executable elm-haskell-fullstack-exe
+executable flare-exe
   main-is: Main.hs
   other-modules:
-      Paths_elm_haskell_fullstack
+      Paths_flare
   hs-source-dirs:
       app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
@@ -57,7 +57,7 @@ executable elm-haskell-fullstack-exe
     , blaze-html >=0.9
     , blaze-markup >=0.8
     , directory
-    , elm-haskell-fullstack
+    , flare
     , http-types
     , mtl
     , text
@@ -67,11 +67,11 @@ executable elm-haskell-fullstack-exe
     , warp >=3
   default-language: Haskell2010
 
-test-suite elm-haskell-fullstack-test
+test-suite flare-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_elm_haskell_fullstack
+      Paths_flare
   hs-source-dirs:
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
