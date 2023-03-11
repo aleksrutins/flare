@@ -1,59 +1,42 @@
-# Warp & Elm Full-Stack
+# Nuxt 3 Minimal Starter
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/NSeGz_?referralCode=Y68pBw)
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-This is a basic full-stack app example using Haskell, [Warp](https://hackage.haskell.org/package/warp), and [Elm](https://elm-lang.org).
+## Setup
 
-## Developing
-You will need:
-- [Haskell Stack](https://docs.haskellstack.org/en/stable/)
-- [Elm](https://elm-lang.org)
-- [esbuild](https://esbuild.github.io/) (in your PATH)
+Make sure to install the dependencies:
 
-To run, just use `stack run`.
+```bash
+# yarn
+yarn install
 
-Elm files are compiled and minified as part of the Haskell build process (see `Setup.hs`); right now, however, they are not tracked for changes, so if you changed an Elm file without changing a Haskell file, you will need to delete `.stack-work` before rebuilding in order to make sure that the Elm is actually rebuilt.
+# npm
+npm install
 
-## Adding a Page
-To add a page, first create an Elm module, e.g.:
-
-```elm
-module MyPage exposing (..)
-
-
-import Browser
-import Html exposing (Html, div, text)
-
--- MAIN
-main =
-  Browser.sandbox { init = init, update = update, view = view }
-
--- MODEL
-type alias Model = ()
-
-init : Model
-init =
-  ()
-
--- UPDATE
-type alias Msg = ()
-
-update : Msg -> Model -> Model
-update _ model =
-  model
-
--- VIEW
-view : Model -> Html Msg
-view _ =
-  div [] [text "Hello!"]
+# pnpm
+pnpm install
 ```
 
-Then, add it to the `buildElm` list in `Setup.hs`:
+## Development Server
 
-```haskell
-...
-postBuild = buildElm ["Main", "About", "MyPage"]
-...
+Start the development server on http://localhost:3000
+
+```bash
+npm run dev
 ```
 
-And you're done!
+## Production
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+npm run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
