@@ -1,0 +1,91 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           elm-haskell-fullstack
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/aleksrutins/elm-haskell-fullstack#readme>
+homepage:       https://github.com/aleksrutins/elm-haskell-fullstack#readme
+bug-reports:    https://github.com/aleksrutins/elm-haskell-fullstack/issues
+author:         Aleks Rutins
+maintainer:     aleks@rutins.com
+copyright:      2023 Aleks Rutins
+license:        BSD3
+license-file:   LICENSE
+build-type:     Custom
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/aleksrutins/elm-haskell-fullstack
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_elm_haskell_fullstack
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , blaze-html >=0.9
+    , blaze-markup >=0.8
+    , directory
+    , http-types
+    , mtl
+    , text
+    , wai >=3
+    , wai-extra
+    , wai-middleware-static >=0.9
+    , warp >=3
+  default-language: Haskell2010
+
+executable elm-haskell-fullstack-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_elm_haskell_fullstack
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , blaze-html >=0.9
+    , blaze-markup >=0.8
+    , directory
+    , elm-haskell-fullstack
+    , http-types
+    , mtl
+    , text
+    , wai >=3
+    , wai-extra
+    , wai-middleware-static >=0.9
+    , warp >=3
+  default-language: Haskell2010
+
+test-suite elm-haskell-fullstack-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_elm_haskell_fullstack
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , blaze-html >=0.9
+    , blaze-markup >=0.8
+    , directory
+    , elm-haskell-fullstack
+    , http-types
+    , mtl
+    , text
+    , wai >=3
+    , wai-extra
+    , wai-middleware-static >=0.9
+    , warp >=3
+  default-language: Haskell2010
